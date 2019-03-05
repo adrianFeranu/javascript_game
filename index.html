@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project_6</title>
+    <link rel="stylesheet"  x-href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="css.css" rel="stylesheet" type="text/css" media="screen">
+     </head>
+<body>
+ 
+  <script>
+  var computerGuess = Math.random() * 10 ;
+  computerGuess = Math.ceil(computerGuess)
+      function higher () {
+          if(computerGuess > 5){
+              document.getElementById("textField").innerHTML="You win";
+          }
+          else {   document.getElementById("textField").innerHTML="You lose";       
+          
+          }
+      }
+    
+      function lower () {
+          if(computerGuess <= 5){
+              document.getElementById("textField").innerHTML="You win";
+          }
+          else {   document.getElementById("textField").innerHTML="You lose";       
+          
+          }
+      }
+      
+      function reset() {
+          window.location.reload ();
+      }
+    </script>  
+    <div class ="align">
+        <h1>Higher or lower</h1>
+        <h2> Is my number 5 or less, or higher than 5 ?</h2>
+        <p> Range 1-10</p>
+        <h3 id ="textField"></h3>
+        <input type = "button" class = "btn btn-info" value = "Higher" onclick="higher();">
+        <input type = "button" class = "btn btn-info" value = "Lower" onclick="lower();">
+    </div> </br>
+    <div class ="align">
+    <input type = "button" class = "btn btn-info" value = "Play again" onclick="reset();">
+    </div>
+</body>
+</html>
